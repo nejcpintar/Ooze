@@ -10,6 +10,8 @@
 		A8EE62A61C3C10930054C980 /* ooze.h in Headers */ = {isa = PBXBuildFile; fileRef = A8EE62A51C3C10930054C980 /* ooze.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8EE62AD1C3C10930054C980 /* ooze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8EE62A21C3C10930054C980 /* ooze.framework */; };
 		A8EE62B21C3C10930054C980 /* oozeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE62B11C3C10930054C980 /* oozeTests.swift */; };
+		A8EE62BD1C3C12B10054C980 /* Ooze.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE62BC1C3C12B10054C980 /* Ooze.swift */; };
+		A8EE62BF1C3C1B590054C980 /* Funnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE62BE1C3C1B590054C980 /* Funnel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		A8EE62AC1C3C10930054C980 /* oozeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oozeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EE62B11C3C10930054C980 /* oozeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oozeTests.swift; sourceTree = "<group>"; };
 		A8EE62B31C3C10930054C980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8EE62BC1C3C12B10054C980 /* Ooze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ooze.swift; sourceTree = "<group>"; };
+		A8EE62BE1C3C1B590054C980 /* Funnel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funnel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				A8EE62A51C3C10930054C980 /* ooze.h */,
+				A8EE62BC1C3C12B10054C980 /* Ooze.swift */,
+				A8EE62BE1C3C1B590054C980 /* Funnel.swift */,
 				A8EE62A71C3C10930054C980 /* Info.plist */,
 			);
 			path = ooze;
@@ -194,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8EE62BD1C3C12B10054C980 /* Ooze.swift in Sources */,
+				A8EE62BF1C3C1B590054C980 /* Funnel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,7 @@
 		A8EE62B71C3C10930054C980 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nejc.ooze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A8EE62B81C3C10930054C980 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
